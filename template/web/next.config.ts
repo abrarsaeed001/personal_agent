@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Compression would buffer the chat event stream; let your proxy/CDN compress instead.
   compress: false,
+
+  devindicator:false,
   async rewrites() {
     return [{ source: "/api/:path*", destination: `${API_URL}/api/:path*` }];
   },
